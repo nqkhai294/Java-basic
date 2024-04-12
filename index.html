@@ -7,10 +7,24 @@
 </head>
 <body>
     <script>
-        alert("Biet cach up code len git r ahahaha");
-        let hello = (val) => {
-            return "Hello" + val;
+        async function exampleFunction() {
+            console.log('Start');
+
+            let promise = new Promise(resolve => {
+                setTimeout(() => {
+                    console.log('test');
+                    
+                }, 0);
+                resolve("aaaa");
+            }).then(res => console.log(res));
+
+            await promise;
+
+            console.log('End');  
         }
+
+        exampleFunction();
+        
     </script>
 </body>
 </html>
